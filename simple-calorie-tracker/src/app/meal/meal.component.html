@@ -1,0 +1,21 @@
+@if (meal) {
+  <ion-item [routerLink]="'/meal/' + meal.id" [detail]="false">
+    <div slot="start" [class]="!meal.id ? 'dot dot-unread' : 'dot'"></div>
+    <ion-label class="ion-text-wrap">
+      <h2>
+        {{ meal.id }}
+        <span class="expandable">
+          @if (isIos() || isAndroid()) {
+            <ion-icon aria-hidden="true" name="chevron-forward" size="small"></ion-icon>
+          } @else {
+            <ion-icon aria-hidden="false" name="chevron-forward" size="small"></ion-icon>
+          }
+        </span>
+      </h2>
+      <h3>{{ meal.title }}</h3>
+      <p>
+        created {{meal.date}}
+      </p>
+    </ion-label>
+  </ion-item>
+}
