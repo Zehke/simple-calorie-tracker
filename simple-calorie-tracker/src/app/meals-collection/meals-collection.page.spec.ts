@@ -3,19 +3,19 @@ import { RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { MealComponentModule} from '../meal/meal.module'
-import { HomePage } from './meals-collection.page';
+import { MealsCollection } from './meals-collection.page';
 
-describe('HomePage', () => {
-  let component: HomePage;
-  let fixture: ComponentFixture<HomePage>;
+describe('MealsCollection', () => {
+  let component: MealsCollection;
+  let fixture: ComponentFixture<MealsCollection>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [HomePage],
+      declarations: [MealsCollection],
       imports: [IonicModule.forRoot(), MealComponentModule, RouterModule.forRoot([])]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(HomePage);
+    fixture = TestBed.createComponent(MealsCollection);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

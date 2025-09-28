@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 
-import { HomePage } from './meals-collection.page';
-import { HomePageRoutingModule } from './meals-collection-routing.module';
+import { MealsCollection } from './meals-collection.page';
+import { MealsCollectionRoutingModule } from './meals-collection-routing.module';
 import { MealComponentModule } from '../meal/meal.module';
+import { MealModalComponent } from '../meal-modal/meal-modal.component';
 
 @NgModule({
   imports: [
@@ -13,8 +14,9 @@ import { MealComponentModule } from '../meal/meal.module';
     FormsModule,
     IonicModule,
     MealComponentModule,
-    HomePageRoutingModule
+    MealModalComponent,
+    MealsCollectionRoutingModule
   ],
-  declarations: [HomePage]
+  declarations: [MealsCollection]
 })
-export class HomePageModule {}
+export class MealsCollectionModule {}

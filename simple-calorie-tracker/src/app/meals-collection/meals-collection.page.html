@@ -18,10 +18,17 @@
       </ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-button (click)="openAdd()">Add Meal</ion-button>
 
   <ion-list>
-    @for (meal of getMeals(); track meal) {
-      <app-meal [meal]="meal"></app-meal>
+    @for (meal of (meals$ | async); track meal.id) {
+      <app-meal (delete)="onDelete($event)" [meal]="meal"></app-meal>
     }
+      <app-meal-modal 
+        [isOpen]="showModal" 
+        [lastIdOfMeals]="(nextId$ | async) ?? 1" 
+        (add)="onAdd($event)"
+        (discard)="onDiscard()"
+        ></app-meal-modal>
   </ion-list>
 </ion-content>
