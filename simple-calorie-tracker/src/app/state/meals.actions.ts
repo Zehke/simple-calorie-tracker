@@ -4,7 +4,7 @@ import { Meal } from "../meal/meal.model";
 export const MealsActions = createActionGroup({
   source: 'Meals',
   events: {
-    'Add Meal': props<{ mealId: number }>(),
+    'Add Meal': props<{meal: Meal}>(),
     'Delete Meal': props<{ mealId: number }>(),
   },
 });
