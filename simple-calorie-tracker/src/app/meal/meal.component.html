@@ -1,5 +1,5 @@
 @if (meal) {
-  <ion-item [routerLink]="'/meal/' + meal.id" [detail]="false">
+  <ion-item [detail]="false">
     <div slot="start" [class]="!meal.id ? 'dot dot-unread' : 'dot'"></div>
     <ion-label class="ion-text-wrap">
       <h2>
@@ -17,5 +17,6 @@
         created {{meal.date}}
       </p>
     </ion-label>
+    <ion-button (click)="onClick(meal.id, $event)">Delete</ion-button>
   </ion-item>
 }
