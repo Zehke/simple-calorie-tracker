@@ -1,27 +1,25 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Inline Modal</ion-title>
-  </ion-toolbar>
-</ion-header>
 <ion-content class="ion-padding">
-  <ion-button expand="block" (click)="setOpen(true)">Open</ion-button>
-  <ion-modal [isOpen]="isOpen">
-    <ng-template>
-      <ion-header>
-        <ion-toolbar>
-          <ion-title>Modal</ion-title>
-          <ion-buttons slot="end">
-            <ion-button (click)="setOpen(false)">Close</ion-button>
-          </ion-buttons>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content class="ion-padding">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
-          reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
-          dicta.
-        </p>
-      </ion-content>
-    </ng-template>
-  </ion-modal>
+ <ion-modal [isOpen]="isOpen" (didDismiss)="discardChanges()">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Add Meal</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="discardChanges()">Discard</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="ion-padding">
+      <ion-item>
+        <ion-input
+          label="Input title of your meal"
+          labelPlacement="stacked"
+          [(ngModel)]="mealTitle">
+        </ion-input>
+      </ion-item>
+      <ion-button expand="block" (click)="onAddClick()" [disabled]="this.mealTitle.trim().length === 0">Add</ion-button>
+    </ion-content>
+  </ng-template>
+</ion-modal>
 </ion-content>
