@@ -1,6 +1,6 @@
 Simple Calorie Tracker (Ionic + Angular + NgRx)
 
-A tiny CRUD app to add and delete personal meals, built with Ionic/Angular and NgRx (Redux pattern). The focus is a clean state model, proper actions/reducers/selectors, and optional state persistence to Local Storage.
+A tiny crd app to add and delete personal meals, built with Ionic/Angular and NgRx (Redux pattern). The focus is a clean state model, proper actions/reducers/selectors, and optional state persistence to Local Storage.
 
 Demo (what it does)
 - Add a meal (title + timestamp)
