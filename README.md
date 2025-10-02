@@ -14,7 +14,9 @@ Tech Stack
 - NgRx Store
 - ngrx-store-localstorage
 
-https://github.com/user-attachments/assets/31f49c05-bc11-4f29-8c6e-4e911706c01a
+
+https://github.com/user-attachments/assets/b0533e07-5e1a-4756-b5e9-dc8e2a65dd9a
+
 
 ### Get started: 
 - 0) download repo
