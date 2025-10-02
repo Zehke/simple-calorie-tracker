@@ -35,3 +35,120 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+
+:root {
+  --ion-color-primary: #6c5ce7;
+  --ion-color-primary-contrast: #ffffff;
+
+  --ion-color-secondary: #00d1b2;
+
+  --app-card-bg: var(--ion-color-step-50, #ffffff);
+  --app-card-sep: 12px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --app-card-bg: var(--ion-color-step-100, #1f1f1f);
+  }
+}
+
+ion-toolbar {
+  --background: linear-gradient(90deg, var(--ion-color-primary) 0%, #8a7cf5 100%);
+  --color: #fff;
+}
+
+.app-card {
+  background: var(--app-card-bg);
+  border-radius: 0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .08);
+  padding: 1em 1.2em;
+  margin: var(--app-card-sep) 1em;
+}
+
+.empty {
+  text-align: center;
+  opacity: .7;
+  padding: 24px;
+}
+
+ion-button {
+  margin: 0.5em;
+}
+
+.button::part(native) {
+  border-radius: 0;
+}
+
+ion-item {
+  border-radius: 0;
+  border-right: #00d1b2 solid 2px;
+  border-bottom: #00d1b2 solid 2px;
+}
+
+.toolbar-title::part {
+  text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  ion-button.cross-border::before,
+  ion-button.cross-border::after {
+    background: #00d1b2;
+  }
+
+  ion-item, ion-header, .border-bottom{
+    border-radius: 0;
+    border-bottom: #00d1b2 solid 2px;
+  }
+  
+  ion-item {
+    border-right: #00d1b2 solid 2px;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+
+  ion-button.cross-border::before,
+  ion-button.cross-border::after {
+    background: black;
+  }
+
+  ion-item, ion-header, .border-bottom {
+    border-radius: 0;
+    border-bottom: black solid 2px;
+  }
+  
+  ion-item {
+    border-right: black solid 2px;
+  }
+}
+
+ion-button.cross-border {
+  position: relative;
+  --background: #6c5ce7;
+  --color: #fff;
+  border: none;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+
+  /*horizontal line*/
+  &::before {
+    bottom: -2px;
+    left: -5px;
+    right: -5px;
+    height: 2px;
+  }
+
+  /*vertical line*/
+  &::after {
+    top: -4px;
+    bottom: -4px;
+    right: -2px;
+    width: 2px;
+  }
+}

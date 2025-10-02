@@ -18,7 +18,7 @@
           [(ngModel)]="mealTitle">
         </ion-input>
       </ion-item>
-      <ion-button expand="block" (click)="onAddClick()" [disabled]="this.mealTitle.trim().length === 0">Add</ion-button>
+      <ion-button expand="block" class="border-bottom" (click)="onAddClick()" [disabled]="this.mealTitle.trim().length === 0">Add</ion-button>
     </ion-content>
   </ng-template>
 </ion-modal>

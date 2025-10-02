@@ -18,7 +18,9 @@
       </ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-button (click)="openAdd()">Add Meal</ion-button>
+  <div class="flex-button">
+    <ion-button class="cross-border" (click)="openAdd()">Add Meal</ion-button>
+  </div>
 
   <ion-list>
     @for (meal of (meals$ | async); track meal.id) {
